@@ -1,6 +1,6 @@
 # This file wont do us much good in this location, make sure you change the path as directed to continue!
 
-name: Node CI
+name: Docker CD
 
 on:
   push:
@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: npm install and build webpack
-        run: |
+        run: 
           npm install
           npm run build
       - uses: actions/upload-artifact@master
